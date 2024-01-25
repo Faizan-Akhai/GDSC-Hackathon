@@ -41,13 +41,13 @@ const Home = () => {
         setImageToShow(data.imageUrl);
       } else if (file) {
         const endpoint =
-          "https://gdsccustomvission-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/ffa9eb29-7aec-4195-bb1f-e44ae3c639fd/classify/iterations/GDSC%20X-ray%20model/image";
+          "Your private endpoint";
         const formData = new FormData();
         formData.append("image", file);
 
         const response = await axios.post(endpoint, formData, {
           headers: {
-            "Prediction-Key": "05a818d2768d4de39e1eb779332509b3",
+            "Prediction-Key": "Your prediction key",
             "Content-Type": "application/octet-stream",
           },
         });
